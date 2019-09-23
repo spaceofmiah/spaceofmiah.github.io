@@ -1,0 +1,56 @@
+/* base color definition */
+/* base sizing definition */
+/* reset all */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+  font-family: verdana;
+  background-color: #2d6165;
+}
+
+a {
+  text-decoration: none;
+  color: #33cddf;
+}
+
+nav {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav section {
+  display: flex;
+  justify-content: space-between;
+}
+nav section h1 {
+  color: #f6eefc;
+  font-size: 28px;
+  padding: 0 18px;
+}
+nav section svg {
+  color: #f6eefc;
+  align-self: center;
+}
+nav ul {
+  flex-shrink: 0;
+  flex-grow: 0.27;
+  flex-basis: 1px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+nav ul li {
+  padding: 18px;
+  align-self: center;
+  justify-self: center;
+}
+
+/*# sourceMappingURL=index.css.map */

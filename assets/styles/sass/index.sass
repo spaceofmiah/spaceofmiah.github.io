@@ -1,0 +1,70 @@
+
+/* base color definition */
+
+$default_color: #000000
+$primary_color : #f6eefc
+$secondary_color: #33cddf
+$tertiary_color: #2d6165
+
+/* base sizing definition */
+
+$x_small_size : 16px
+$small_size: 18px
+$normal_size: 22px
+$medium_size: 28px
+$large_size: 38px
+$x_large_size: 44px
+
+
+/* reset all */
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+
+html
+    font-size: $normal_size
+    font-family: verdana
+    background-color: $tertiary_color
+
+a
+    text-decoration: none
+    color: $secondary_color
+
+
+nav
+    padding: $small_size
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+    section
+        display: flex
+        justify-content: space-between
+
+        h1
+            color : $primary_color
+            font-size: $medium_size
+            padding: 0 $small_size
+        
+        svg
+            color: $primary_color
+            align-self: center
+    
+    ul 
+        flex-shrink: 0
+        flex-grow: .27
+        flex-basis: 1px
+        list-style: none
+        display: flex
+        justify-content: space-between
+        text-transform: capitalize
+        font-size: $x_small_size
+
+
+        li
+            padding: $small_size
+            align-self: center
+            justify-self: center
