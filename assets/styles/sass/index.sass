@@ -33,38 +33,146 @@ a
     text-decoration: none
     color: $secondary_color
 
+@keyframes faint-in
+    from 
+        opacity: 0
+        width: 0
+    to 
+        width: 86%
+        opacity: 1
 
+
+@keyframes faint-out
+    from 
+        width: 86%
+        opacity: 1
+
+    to 
+        opacity: 0
+        width: 0
+
+@keyframes smooth-move-left
+    from
+        transform: translateX(0vw)
+
+    to 
+        transform: translateX(-80vw)
+
+@keyframes glow
+    from
+        box-shadow: 0px 0px 0px 0px $secondary_color
+    
+    to
+        box-shadow: 0px 0px 2px 4px $secondary_color
+        border-radius: 8px
+
+
+@keyframes smooth-move-right
+    from
+        transform: translateX(-80vw)
+
+    to 
+        transform: translateX(0vw)
+
+.faint-in 
+    animation-name: faint-in
+    animation-timing-function: ease-in-out
+    animation-duration: 1.7s
+    animation-fill-mode: forwards
+
+
+.faint-out
+    animation-name: faint-out
+    animation-timing-function: ease-in-out
+    animation-duration: 1.7s
+    animation-fill-mode: forwards
+
+.smooth-left-move 
+    animation-name: smooth-move-left
+    animation-duration: 2s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+
+.smooth-right-move
+    animation-name: smooth-move-right
+    animation-duration: 2s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+
+.glow
+    animation-name: glow
+    animation-timing-function: ease-in-out
+    animation-duration: 1.9s
+    animation-iteration-count: infinite
+
+
+// Navigation style
 nav
-    padding: $small_size
+    padding: $normal_size $small_size
     display: flex
     justify-content: space-between
     align-items: center
-    
+
+    h1
+        color : $primary_color
+        font-size: $medium_size
+        
     section
         display: flex
         justify-content: space-between
+        align-items: center
 
-        h1
-            color : $primary_color
-            font-size: $medium_size
-            padding: 0 $small_size
+        #navbar-toggler
+            padding: $x_small_size
+            background: $secondary_color
+            cursor: pointer
+            z-index: 2
+            
+        #navbar-content
+            width: 0
+            position: absolute
+            background: black
+            height: 56px
+            right: 0
+            padding: $normal_size
+
+
+            #content
+                width: 100%
+                display: none
+                padding-right: $normal_size
+                justify-content: space-between
+                align-items: center
+                font-size: $x_small_size
         
-        svg
-            color: $primary_color
+        #navbar-toggler svg
+            color: $default_color
             align-self: center
     
-    ul 
-        flex-shrink: 0
-        flex-grow: .27
-        flex-basis: 1px
-        list-style: none
-        display: flex
-        justify-content: space-between
-        text-transform: capitalize
-        font-size: $x_small_size
+        ul 
+            flex-shrink: 0
+            flex-grow: .27
+            flex-basis: 1px
+            list-style: none
+            display: none
+            justify-content: space-between
+            text-transform: capitalize
+            font-size: $x_small_size
 
 
-        li
-            padding: $small_size
-            align-self: center
-            justify-self: center
+            li
+                padding: $small_size
+                align-self: center
+                justify-self: center
+
+@media screen and (min-width: 620px)
+    nav 
+        section
+            #navbar-toggler
+                display: none
+
+            #navbar-content
+                display: none
+
+            ul
+                display: flex

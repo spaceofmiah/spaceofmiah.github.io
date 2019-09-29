@@ -18,39 +18,153 @@ a {
   color: #33cddf;
 }
 
+@keyframes faint-in {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    width: 86%;
+    opacity: 1;
+  }
+}
+@keyframes faint-out {
+  from {
+    width: 86%;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    width: 0;
+  }
+}
+@keyframes smooth-move-left {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(-80vw);
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 0px 0px #33cddf;
+  }
+  to {
+    box-shadow: 0px 0px 2px 4px #33cddf;
+    border-radius: 8px;
+  }
+}
+@keyframes smooth-move-right {
+  from {
+    transform: translateX(-80vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+.faint-in {
+  animation-name: faint-in;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.faint-out {
+  animation-name: faint-out;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.smooth-left-move {
+  animation-name: smooth-move-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.smooth-right-move {
+  animation-name: smooth-move-right;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.glow {
+  animation-name: glow;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.9s;
+  animation-iteration-count: infinite;
+}
+
 nav {
-  padding: 18px;
+  padding: 22px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+nav h1 {
+  color: #f6eefc;
+  font-size: 28px;
+}
 nav section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav section h1 {
-  color: #f6eefc;
-  font-size: 28px;
-  padding: 0 18px;
+nav section #navbar-toggler {
+  padding: 16px;
+  background: #33cddf;
+  cursor: pointer;
+  z-index: 2;
 }
-nav section svg {
-  color: #f6eefc;
+nav section #navbar-content {
+  width: 0;
+  position: absolute;
+  background: black;
+  height: 56px;
+  right: 0;
+  padding: 22px;
+}
+nav section #navbar-content #content {
+  width: 100%;
+  display: none;
+  padding-right: 22px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+nav section #navbar-toggler svg {
+  color: #000000;
   align-self: center;
 }
-nav ul {
+nav section ul {
   flex-shrink: 0;
   flex-grow: 0.27;
   flex-basis: 1px;
   list-style: none;
-  display: flex;
+  display: none;
   justify-content: space-between;
   text-transform: capitalize;
   font-size: 16px;
 }
-nav ul li {
+nav section ul li {
   padding: 18px;
   align-self: center;
   justify-self: center;
+}
+
+@media screen and (min-width: 620px) {
+  nav section #navbar-toggler {
+    display: none;
+  }
+  nav section #navbar-content {
+    display: none;
+  }
+  nav section ul {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
