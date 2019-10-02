@@ -1,0 +1,231 @@
+/* base color definition */
+
+$white_color: #ffffff;
+$black_color: #000000;
+$light_green_color: #00ff56;
+$light_blue_color: #33cddf;
+$dark_blue_color: #275154;
+
+/* base sizing definition */
+
+$x_small_size: 16px;
+$small_size: 18px;
+$normal_size: 22px;
+$medium_size: 28px;
+$large_size: 38px;
+$x_large_size: 44px;
+
+/* reset all */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $normal_size;
+	font-family: verdana;
+	background-color: $dark_blue_color;
+}
+
+a {
+	text-decoration: none;
+	color: $light_blue_color;
+}
+
+input {
+	border-color: $light_blue_color;
+	background: transparent;
+	border-style: solid;
+	border-radius: 4px;
+	border-width: 3px;
+	outline: none;
+	padding: 2px 6px;
+	color: $white_color;
+}
+
+@mixin theme($light-theme) {
+	@if ($light-theme) {
+		background: lighten($dark_blue_color, 100%);
+		color: darken($white_color, 100%);
+	}
+}
+
+@keyframes faint-in {
+	from {
+		opacity: 0;
+		width: 0;
+	}
+
+	to {
+		width: 86%;
+		opacity: 1;
+	}
+}
+
+@keyframes faint-out {
+	from {
+		width: 86%;
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		width: 0;
+	}
+}
+
+@keyframes smooth-move-left {
+	from {
+		transform: translateX(0vw);
+	}
+	to {
+		transform: translateX(-80vw);
+	}
+}
+
+@keyframes glow {
+	from {
+		box-shadow: 0px 0px 0px 0px $light_blue_color;
+	}
+
+	to {
+		box-shadow: 0px 0px 2px 4px $light_blue_color;
+		border-radius: 8px;
+	}
+}
+
+@keyframes smooth-move-right {
+    from{
+        transform: translateX(-80vw);
+    }
+
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+.faint-in {
+    animation-name: faint-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.faint-out {
+    animation-name: faint-out;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.smooth-left-move {
+    animation-name: smooth-move-left;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.smooth-right-move {
+    animation-name: smooth-move-right;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.glow {
+    animation-name: glow;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.9s;
+    animation-iteration-count: infinite;
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+
+// Navigation style
+nav {
+    padding: $normal_size $small_size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        color : $light_green_color;
+        font-size: $medium_size;
+    }
+        
+    section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #navbar-toggler {
+            padding: $x_small_size;
+            background: $light_blue_color;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        #navbar-content {
+            width: 0;
+            position: absolute;
+            background: black;
+            height: 56px;
+            right: 0;
+            padding: $normal_size;
+        
+
+            #content {
+                width: 100%;
+                display: none;
+                padding-right: $normal_size;
+                justify-content: space-between;
+                align-items: center;
+                font-size: $x_small_size;
+            }
+        }
+
+        #navbar-toggler svg {
+            color: $black_color;
+            align-self: center;
+        }
+    
+        ul {
+            flex-shrink: 0;
+            flex-grow: .27;
+            flex-basis: 1px;
+            list-style: none;
+            display: none;
+            justify-content: space-between;
+            text-transform: capitalize;
+            font-size: $x_small_size;
+
+            li {
+                padding: $small_size;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 620px){
+    nav {
+        section{
+            #navbar-toggler {
+                display: none
+            }
+
+            #navbar-content{
+                display: none
+            }
+
+            ul{
+                display: flex;
+            }
+        }
+    }
+}
