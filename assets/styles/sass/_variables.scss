@@ -1,0 +1,27 @@
+// base color definition 
+$text_color : #ffffff;
+$primary_color: #0cb61c;
+$secondary_color: rgb(255, 108, 55);
+$background_color : #272722;
+
+// defining gutters 
+$gutters : (
+    'small': 10px,
+    'medium': 20px, 
+    'large': 30px
+);
+
+// defining screen sizes
+$screens: (
+    'mobile': 620px,
+    'regular': 720px,
+    'medium': 820px
+);
+
+// defining font sizes
+$font-sizes: (
+    'small': 18px,
+    'regular': 22px,
+    'medium': 28px,
+    'large': 56px
+);

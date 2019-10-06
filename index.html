@@ -11,49 +11,26 @@
     <script src="./assets/scripts/fontawesome.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div>
-                <h1>Spaceofmiah</h1>
+<body class="light-theme">
+    <nav class="navbar">
+        <h1 class="navbar__heading">Spaceofmiah</h1>
+        <div class="navbar__links_wrap">
+            <!-- navbar links toggler -->
+            <div class="navbar__links_wrap__toggler">
+                <a id="nav_toggler">
+                    <i class="fas fa-bars"></i>
+                </a>
             </div>
 
-            <section>
-
-                <div id="navbar-content">
-                    <div id="content">
-                        <a href="#">home</a>
-                        <a href="#">blog</a>
-                        <a href="#">about</a>
-                        <a href="#">contact</a>
-                    </div>
-                </div>
-
-                <div id="navbar-toggler">
-                    <i class="fas fa-less-than fa-1x"></i>
-                </div>
-
-                <ul id="list-items">
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-                    <li>
-                        <a href="#">blog</a>
-                    </li>
-                    <li>
-                        <a href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="#">contact</a>
-                    </li>
-                </ul>
-            </section>
-
-
-        </nav>
-    </header>
-
-    <script src="./assets/scripts/index.js"></script>
+            <!-- main wrap for all navbar links -->
+            <div class="navbar__links_wrap__main" id="navbar_links">
+                <a href="#">home</a>
+                <a href="#">post</a>
+                <a href="#">about</a>
+                <a href="#" id="get_in_touch">get in touch</a>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript" src="./assets/scripts/index.js"></script>
 </body>
-
 </html>
