@@ -219,8 +219,8 @@ input[type=submit] {
 }
 .post_list h2 {
   color: #ff6c37;
+  text-align: center;
   font-weight: 500;
-  font-size: 22px;
 }
 .post_list .post_list__cta {
   display: flex;
@@ -241,16 +241,36 @@ input[type=submit] {
 }
 
 .post {
-  margin-top: 40px;
+  margin-top: 20px;
+  text-align: center;
 }
 @media screen and (min-width: 820px) {
   .post {
     padding: 0 60px;
   }
 }
-.post .post__header p {
-  font-size: 15px;
-  color: #999999;
+.post .post__title {
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.post .post__info .date_n_tag {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post .post__info .date_n_tag span {
+  margin-left: 10px;
+}
+.post .post__info .likes_n_comment {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post .post__info .likes_n_comment a {
+  color: #d03700;
+  margin-left: 10px;
 }
 .post p {
   color: #b3b3b3;
