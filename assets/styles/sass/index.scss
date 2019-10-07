@@ -440,3 +440,16 @@ input[type='submit'] {
 		}
 	}
 }
+
+/* random_words component */
+.random_words {
+	text-align: center;
+	color: darken($default_color, 30%);
+	font-weight: 400;
+	padding-top: add-gutter('large') ;
+
+	p {
+		font-size: font-size('small') - 3;
+		color: darken($primary_color, 10%);
+	}
+}

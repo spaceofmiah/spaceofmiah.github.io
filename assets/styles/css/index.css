@@ -369,4 +369,16 @@ input[type=submit] {
   padding: 10px;
 }
 
+/* random_words component */
+.random_words {
+  text-align: center;
+  color: #b3b3b3;
+  font-weight: 400;
+  padding-top: 30px;
+}
+.random_words p {
+  font-size: 15px;
+  color: #098615;
+}
+
 /*# sourceMappingURL=index.css.map */
