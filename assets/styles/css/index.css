@@ -340,4 +340,33 @@ input[type=submit] {
   margin-top: 30px;
 }
 
+/* about me component */
+.about_me_wrap {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 620px) {
+  .about_me_wrap {
+    text-align: left;
+  }
+}
+.about_me_wrap h2 {
+  color: #ff6c37;
+}
+.about_me_wrap p {
+  font-size: 15px;
+  color: #cccccc;
+}
+.about_me_wrap .about_me_wrap__connect {
+  margin-top: 10px;
+}
+.about_me_wrap .about_me_wrap__connect h5 {
+  font-weight: 400;
+  color: #b73000;
+}
+.about_me_wrap .about_me_wrap__connect a {
+  padding: 10px;
+}
+
 /*# sourceMappingURL=index.css.map */

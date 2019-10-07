@@ -405,3 +405,38 @@ input[type='submit'] {
 		margin-top: add-gutter('large');
 	}
 }
+
+
+
+/* about me component */
+.about_me_wrap {
+	margin-top: add-gutter('medium');
+	padding: add-gutter('medium');
+	text-align: center;
+
+	@media screen and (min-width: screen-size('mobile')) {
+		text-align: left;
+	}
+
+	h2 {
+		color: $secondary_color;
+	}
+
+	p {
+		font-size: font-size('small') - 3px;
+		color: darken($default_color, 20%);
+	}
+
+	#{&}__connect {
+		margin-top: add-gutter('small');
+
+		h5 {
+			font-weight: 400;
+			color: darken($secondary_color, 25%);
+		}
+
+		a {
+			padding: add-gutter('small');
+		}
+	}
+}
