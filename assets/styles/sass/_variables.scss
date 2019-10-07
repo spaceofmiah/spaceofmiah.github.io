@@ -1,8 +1,7 @@
 // base color definition 
-$text_color : #ffffff;
+$default_color : #ffffff;
 $primary_color: #0cb61c;
 $secondary_color: rgb(255, 108, 55);
-$background_color : #000000;
 
 // defining gutters 
 $gutters : (
@@ -14,8 +13,8 @@ $gutters : (
 // defining screen sizes
 $screens: (
     'mobile': 620px,
-    'regular': 720px,
-    'medium': 820px
+    'medium': 720px,
+    'large': 820px
 );
 
 // defining font sizes

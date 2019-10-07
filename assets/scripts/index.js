@@ -31,6 +31,20 @@ content_area.addEventListener('touchstart', ()=> {
         toggle();
     };
 })
+
+
+/**
+ * close navbar when a user click the screen
+ */
+content_area.addEventListener('click', ()=> {
+    // when a user tries to scroll down a page with the navbar open,
+    // automatically close it.
+    if(navbar_links.classList.contains('active_navbar')){
+        console.log("i")
+        toggle();
+    };
+})
+
 /**
  * hide navbar on window resize
  */
