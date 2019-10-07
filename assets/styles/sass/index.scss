@@ -14,8 +14,8 @@
 
 @mixin theme($light-theme) {
 	@if $light-theme {
-		background-color: darken($default_color, 100%);
-		color: lighten($default_color, 100%);
+		background-color: $default_color;
+		color: darken($default_color, 100%);
 	}
 }
 
@@ -40,7 +40,7 @@
 
 // scss rule
 .light-theme {
-	@include theme($light-theme: false);
+	@include theme($light-theme: true);
 }
 
 // reset all
@@ -58,6 +58,7 @@
 
 /* universal rules */
 body {
+	font-size: font-size('small');
 	color: $default_color;
 	background-color: darken($color: $default_color, $amount: 100%);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -222,5 +223,47 @@ a {
 				color: $secondary_color;
 			}
 		}
+	}
+}
+
+
+// post list component
+.post_wrap {
+	margin-top: add-gutter('large') * 3;
+	padding: 0 add-gutter('medium');
+
+	@media screen and (min-width: screen-size('mobile')) {
+		padding: 0 add-gutter('large');
+	}
+}
+
+.post_list {
+	padding: add-gutter('small');
+
+	h2 {
+		color: $secondary_color;
+		font-weight: 500;
+		font-size: font-size('regular');
+	}
+
+	#{&}__content {
+		margin-top: add-gutter('medium');
+	}
+}
+
+.post {
+	margin-top: add-gutter('medium') * 2;
+
+	@media screen and (min-width: screen-size('large')){
+		padding: 0 add-gutter('large') * 2;
+	}
+
+	#{&}__header p {
+		font-size: font-size('small') - 3;
+		color: darken($default_color, 40%);
+	}
+
+	p {
+		color: darken($default_color, 30%);
 	}
 }

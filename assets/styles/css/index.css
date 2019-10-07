@@ -16,6 +16,11 @@
   animation-timing-function: ease-in-out;
 }
 
+.light-theme {
+  background-color: #ffffff;
+  color: black;
+}
+
 @font-face {
   font-family: "kanit";
   src: url("../webfonts/gf-kanit.ttf");
@@ -29,6 +34,7 @@
 
 /* universal rules */
 body {
+  font-size: 18px;
   color: #ffffff;
   background-color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -173,6 +179,44 @@ a {
 }
 .sm_bio .sm_bio__connect a:hover {
   color: #ff6c37;
+}
+
+.post_wrap {
+  margin-top: 90px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 620px) {
+  .post_wrap {
+    padding: 0 30px;
+  }
+}
+
+.post_list {
+  padding: 10px;
+}
+.post_list h2 {
+  color: #ff6c37;
+  font-weight: 500;
+  font-size: 22px;
+}
+.post_list .post_list__content {
+  margin-top: 20px;
+}
+
+.post {
+  margin-top: 40px;
+}
+@media screen and (min-width: 820px) {
+  .post {
+    padding: 0 60px;
+  }
+}
+.post .post__header p {
+  font-size: 15px;
+  color: #999999;
+}
+.post p {
+  color: #b3b3b3;
 }
 
 /*# sourceMappingURL=index.css.map */
