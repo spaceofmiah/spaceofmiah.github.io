@@ -5,6 +5,7 @@ $secondary_color: rgb(255, 108, 55);
 
 // defining gutters 
 $gutters : (
+    'x-small': 8px,
     'small': 10px,
     'medium': 20px, 
     'large': 30px
@@ -19,6 +20,7 @@ $screens: (
 
 // defining font sizes
 $font-sizes: (
+    'x-small': 15px,
     'small': 18px,
     'regular': 22px,
     'medium': 28px,

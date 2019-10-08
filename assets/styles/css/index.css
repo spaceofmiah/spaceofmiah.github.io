@@ -55,6 +55,7 @@ a {
 .form .form-group input[type=text] {
   border: 0.5px solid #999999;
   padding: 10px;
+  font-size: 15px;
   background: transparent;
   color: #ffffff;
   font-weight: 400;
@@ -138,7 +139,7 @@ input[type=submit] {
   color: #ffffff;
   border: 2px solid #ff6c37;
   padding: 8px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navbar .navbar__links_wrap__main a#cta:hover {
   color: #ff6c37;
@@ -197,7 +198,7 @@ input[type=submit] {
   margin-top: 30px;
 }
 .sm_bio .sm_bio__connect a {
-  font-size: 25px;
+  font-size: 28px;
   padding-right: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -254,7 +255,7 @@ input[type=submit] {
   color: #ffffff;
 }
 .post .post__info .date_n_tag {
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,7 +264,7 @@ input[type=submit] {
   margin-left: 10px;
 }
 .post .post__info .likes_n_comment {
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,8 +273,18 @@ input[type=submit] {
   color: #d03700;
   margin-left: 10px;
 }
+.post .post__content {
+  margin-top: 30px;
+  text-align: left;
+  padding: 10px;
+  font-size: 15px;
+}
 .post p {
-  color: #b3b3b3;
+  color: #bfbfbf;
+}
+
+.detailed_post {
+  margin-top: 20px;
 }
 
 /* tags component */
@@ -330,6 +341,7 @@ input[type=submit] {
 .news_letter .form input[type=submit] {
   color: #ffffff;
   padding: 10px;
+  font-size: 15px;
   margin-left: 10px;
   border: 1px solid #ff6c37;
   transition: all 0.3s ease-in-out;
@@ -346,7 +358,7 @@ input[type=submit] {
   margin-top: 10px;
 }
 .footer .bottom_nav a {
-  font-size: 16px;
+  font-size: 15px;
   transition: all 0.4s ease-in-out;
 }
 .footer .bottom_nav a:hover {
@@ -356,7 +368,7 @@ input[type=submit] {
   color: #ff6c37;
 }
 .footer p {
-  font-size: 14px;
+  font-size: 18px;
   margin-top: 30px;
 }
 
