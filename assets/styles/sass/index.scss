@@ -386,7 +386,7 @@ input[type='submit'] {
 /* news letter component*/
 .news_letter__wrap {
 	margin: add-gutter('large') * 2 0;
-	background: darken($primary_color, 20%);
+	background: darken($primary_color, 30%);
 }
 
 .news_letter {
@@ -460,7 +460,7 @@ input[type='submit'] {
 	}
 
 	p {
-		font-size: font-size('x-small');
+		font-size: font-size('small');
 		color: darken($default_color, 20%);
 	}
 
