@@ -107,6 +107,10 @@ input[type='submit'] {
 	}
 }
 
+.active_page_link {
+	color: #92ff9c !important;
+}
+
 /* navbar component */
 .active_navbar {
 	display: flex !important;
@@ -129,11 +133,20 @@ input[type='submit'] {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
+	@media screen and (min-width: screen-size('x-large')){
+		width: 1045px;
+		margin: 0 auto;
+	}
 
 	#{&}__heading {
 		flex: 0.4;
 		font-size: font-size('medium');
 		margin-bottom: add-gutter('small');
+
+		& a {
+			color: $default_color !important;
+		}
 	}
 
 	#{&}__links_wrap {
@@ -334,7 +347,7 @@ input[type='submit'] {
 		margin-top: add-gutter('large');
 		text-align: left;
 		padding: add-gutter('small');
-		font-size: font-size('x-small');
+		font-size: font-size('small');
 	}
 
 	p {
@@ -385,8 +398,8 @@ input[type='submit'] {
 
 /* news letter component*/
 .news_letter__wrap {
-	margin: add-gutter('large') * 2 0;
-	background: darken($primary_color, 30%);
+	margin: add-gutter('large') * 2 0 0 0;
+	background: darken($primary_color, 35%);
 }
 
 .news_letter {
@@ -420,10 +433,13 @@ input[type='submit'] {
 
 /* footer component */
 .footer {
+	border-top: 0.5px solid darken($default_color, 89%);
+	padding-top: add-gutter('large');
 	text-align: center;
+	background: darken($primary_color, 35%);
 
 	& .bottom_nav {
-		margin-top: add-gutter('small');
+		padding-top: add-gutter('small');
 
 		a {
 			font-size: font-size('x-small');
@@ -440,7 +456,7 @@ input[type='submit'] {
 	}
 
 	p {
-		font-size: font-size('small');
+		font-size: font-size('x-small');
 		margin-top: add-gutter('large');
 	}
 }
