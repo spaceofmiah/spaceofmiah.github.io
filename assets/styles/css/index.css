@@ -52,6 +52,7 @@ a {
 .form {
   margin-top: 20px;
 }
+.form .form-group input[type=email],
 .form .form-group input[type=text] {
   border: 0.5px solid #999999;
   padding: 10px;
@@ -59,11 +60,28 @@ a {
   background: transparent;
   color: #ffffff;
   font-weight: 400;
+  min-width: 100%;
   outline: none;
 }
 @media screen and (min-width: 620px) {
-  .form .form-group input[type=text] {
-    min-width: 290px;
+  .form .form-group input[type=email],
+.form .form-group input[type=text] {
+    min-width: 350px;
+  }
+}
+.form .form-group textarea {
+  background: transparent;
+  resize: none;
+  min-width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 200;
+  outline: none;
+}
+@media screen and (min-width: 620px) {
+  .form .form-group textarea {
+    min-width: 350px;
   }
 }
 
@@ -82,6 +100,18 @@ input[type=submit] {
 }
 .active_page_link {
   color: #92ff9c !important;
+}
+
+.connect {
+  margin-top: 30px;
+}
+.connect a {
+  font-size: 18px;
+  padding-right: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.connect a:hover {
+  color: #ff6c37;
 }
 
 /* navbar component */
@@ -160,6 +190,10 @@ input[type=submit] {
   transition: all 0.5s ease-in-out;
 }
 
+.content_area {
+  border-top: 0.5px solid #333333;
+}
+
 /* hero component style */
 .hero {
   background: url("../../images/cover_one.jpg") no-repeat center center;
@@ -206,17 +240,6 @@ input[type=submit] {
 .sm_bio .sm_bio__content #sm_bio__cta:hover {
   border-color: #ffffff;
   color: #0cb61c;
-}
-.sm_bio .sm_bio__connect {
-  margin-top: 30px;
-}
-.sm_bio .sm_bio__connect a {
-  font-size: 28px;
-  padding-right: 10px;
-  transition: all 0.5s ease-in-out;
-}
-.sm_bio .sm_bio__connect a:hover {
-  color: #ff6c37;
 }
 
 .post_wrap {
@@ -351,6 +374,14 @@ input[type=submit] {
   align-items: center;
   flex-wrap: wrap;
 }
+.news_letter .form .form-group input[type=text] {
+  width: 200px;
+}
+@media screen and (min-width: 620px) {
+  .news_letter .form .form-group input[type=text] {
+    width: 300px;
+  }
+}
 .news_letter .form input[type=submit] {
   color: #ffffff;
   padding: 10px;
@@ -427,6 +458,37 @@ input[type=submit] {
 .random_words p {
   font-size: 15px;
   color: #098615;
+}
+
+/* contact_me or get_in_touch component */
+.contact_me {
+  padding: 20px 10px 0 10px;
+  text-align: center;
+}
+.contact_me h1 {
+  color: #ff6c37;
+}
+.contact_me p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.contact_me .form .form-group {
+  margin-top: 10px;
+}
+.contact_me .form .submit_btn_wrap {
+  margin-top: 10px;
+}
+.contact_me .form .submit_btn_wrap input[type=submit] {
+  color: #0cb61c;
+  font-size: 15px;
+  border: 0.5px solid #ff6c37;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.contact_me .form .submit_btn_wrap input[type=submit]:hover {
+  border-color: #0cb61c;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=index.css.map */
