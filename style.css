@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 :root {
     --typeco1: #232323;
     --typeco2: #4287a3;
@@ -7,7 +9,7 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Rubik', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 23px;
     margin: 0 auto;
     width: 900px;
