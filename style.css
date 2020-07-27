@@ -27,7 +27,7 @@ a:hover {
     transition: .2s ease-in;
 }
 
-a.btn { color: var(--typeco2); }
+a.btn { color: var(--typeco2) !important; }
 
 p { line-height: 2.2em; font-size: 0.8em;}
 
@@ -66,6 +66,7 @@ nav .tcn {
     background-color: var(--typeco2);
     border-radius: 100%;
     padding: 0 0.1em;
+    cursor: pointer;
 }
 
 nav ul {
