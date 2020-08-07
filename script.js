@@ -1,16 +1,22 @@
 // Available togglable theme scheme
 let THEME_SCHEME = {
-    moon: {foreground: '#ffffff',background: '#232323'},
-    sun: {foreground: '#232323',background: '#ffffff'}
+    moon: {foreground: '#ffffff',background: '#232323', cls:'lynk'},
+    sun: {foreground: '#232323',background: '#ffffff', cls:'lynk'}
 }
+
+localStorage.removeItem('theme')
 
 /*
 Event handler that responds to theme change action.
 main construct that initiates theme change.
 */
 const changeTheme = (event) => {
-    localStorage.getItem('theme') === 'moon' ? 
-        localStorage.setItem('theme', 'sun'): localStorage.setItem("theme", 'moon');
+    if(localStorage.getItem('theme') === 'sun'){
+        localStorage.setItem('theme', 'moon');
+    } 
+    else {
+        localStorage.setItem("theme", 'sun');
+    }  
     updateTheme();
     changeThemeBtnIcon(event.target);
 }
@@ -20,10 +26,11 @@ changes the foreground and background of theme-able component
 */
 const updateTheme = () => {
     let theme;
-    localStorage.getItem('theme') === "sun" ? theme = THEME_SCHEME.sun : theme = THEME_SCHEME.moon;
-    document.querySelector('body').style.backgroundColor = theme.background;
-    document.querySelector('body').style.color = theme.foreground;
-    document.querySelectorAll('a').forEach(tag => tag.style.color = theme.foreground);
+
+    localStorage.getItem('theme') === "sun" ? 
+        theme = THEME_SCHEME.sun : theme = THEME_SCHEME.moon;
+    document.querySelector('body').classList.toggle('light-bdy');
+    document.querySelectorAll('a').forEach(tag => tag.classList.toggle(theme.cls));
 }
 
 /*
