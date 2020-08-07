@@ -18,30 +18,30 @@ body {
     background-color: var(--typeco1);
 }
 
+.light-bdy {
+    color: var(--typeco1);
+    background-color: var(--typeco3);
+    transition: all .3s ease-in-out;
+}
+
+.lynk,
 a {
     color: var(--typeco3);
     text-decoration: none;
 }
 
-
+.lynk,
 a:hover {
     color: var(--typeco2);
     transition: .2s ease-in;
 }
 
-a.btn { color: var(--typeco2) !important; }
+.lynk { color: var(--typeco1)}
+
+
 
 p { line-height: 2.2em; font-size: 0.8em;}
 
-.cta-s { 
-    font-size: 0.8em;
-    font-weight: 100;
-}
-
-.cta-l { 
-    font-size: 1.03em;
-    font-weight: bolder;
-}
 
 .dw {
     position: fixed;
@@ -60,7 +60,6 @@ nav div {
     justify-content: space-between;
 }
 
-nav div span a { font-size: 0.7em;}
 
 nav .b { color: var(--typeco2) }
 
@@ -92,8 +91,23 @@ nav ul {
 }
 
 header {
-    margin-top: 2.2em;
+    margin: 2.2em 0;
     text-align: center
+}
+
+header figure {
+    margin-bottom: .3em;
+}
+
+header figure img {
+    height: 250px;
+    width: auto;
+    clip-path: circle(50% at 50% 50%);
+}
+
+header h4#slog {
+    font-weight: 200;
+    margin-top: .6em;
 }
 
 header p { font-size: 0.8em; margin: 2.2em 1.1em; }
