@@ -1,7 +1,7 @@
 // Available togglable theme scheme
 let THEME_SCHEME = {
-    moon: {foreground: '#ffffff',background: '#232323', cls:'lynk'},
-    sun: {foreground: '#232323',background: '#ffffff', cls:'lynk'}
+    moon: {foreground: '#ffffff',background: '#232323', cls:'js-lynk'},
+    sun: {foreground: '#232323',background: '#ffffff', cls:'js-lynk'}
 }
 
 localStorage.removeItem('theme')
