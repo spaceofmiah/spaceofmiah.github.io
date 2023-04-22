@@ -2,7 +2,7 @@
 
 :root {
     --typeco1: #232323;
-    --typeco2: #4287a3;
+    --typeco2: #86898a;
     --typeco3: #ffffff;
 }
 
@@ -24,95 +24,36 @@ body {
     transition: all .3s ease-in-out;
 }
 
-.lynk,
-a {
-    color: var(--typeco3);
-    text-decoration: none;
-}
+a { color: var(--typeco3); text-decoration: none; }
 
-.lynk,
-a:hover {
-    color: var(--typeco2);
-    transition: .2s ease-in;
-}
+a:hover { color: var(--typeco2); transition: .2s ease-in; }
 
-.lynk { color: var(--typeco1)}
-
-
+.js-lynk { color: var(--typeco1)}
 
 p { line-height: 2.2em; font-size: 0.8em;}
 
-
-.dw {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -30;
-}
-
 nav div {
-    padding: 18px;
+    padding: 18px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
+nav .tcn { cursor: pointer; text-align: center; }
 
-nav .b { color: var(--typeco2) }
-
-nav .tcn {
-    background-color: var(--typeco2);
-    border-radius: 100%;
-    cursor: pointer;
-    width: 28px;
-    display: block;
-    text-align: center;
-}
-
-nav ul {
-    background-color: var(--typeco);
-    margin-top: 2.2em;
-    padding: 0.3em 0;
-    list-style-type: none;
-    display: grid;
-    height: 110px;
-    font-size: 0.8em;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    border-top: 0.1em solid grey;
-    border-bottom: 0.1em solid grey;
-}
-
-@media (min-width: 620px){
-    nav ul {
-        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-    }
-}
-
-header {
-    margin: 2.2em 0;
-    text-align: center
-}
+header { margin: 2.2em 0; text-align: center; }
 
 header figure {
     margin-bottom: .3em;
 }
 
 header figure img {
-    height: 250px;
-    width: auto;
+    height: 190px; width: auto;
     clip-path: circle(50% at 50% 50%);
 }
 
-header h4#slog {
-    font-weight: 200;
-    margin-top: .6em;
-}
-
-header p { font-size: 0.8em; margin: 2.2em 1.1em; }
+header h4#slog {font-weight: 200; margin-top: .6em;}
 
 header > div {
     margin-top: 2.8em;
