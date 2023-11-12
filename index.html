@@ -35,18 +35,7 @@
                         class="font-bold text-gray-500">over 6 years</span> now.</p>
             </section>
 
-            <section class="mb-14">
-                <h3 class="text-2xl mb-6">Tech Tools</h3>
-
-                <div class="flex flex-row flex-wrap place-items-center gap-3">
-                    <div v-for="item in tech_stack" class="p-1 px-2 bg-slate-300 text-black rounded-xl">
-                        <p class="font-bold text-xs">{{item}}</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="md:max-w-[700px]">
+            <section class="md:max-w-[700px] mb-14">
                 <h3 class="text-2xl mb-3">Built & Building</h3>
                 <section class="flex flex-row gap-6 place-items-center">
                     <a href="https://diarupt.ai" class="font-light text-md hover:text-gray-500">Diarupt</a>
@@ -54,7 +43,25 @@
                     <a class="font-light text-md">Salo <small class="text-xs text-gray-500">(wip)</small></a>
                 </section>
 
-                <small class="text-xs">Have something exciting and want us to collaborate ? Lets Discuss</small>
+                <div class="flex flex-row gap-4 place-items-center flex-wrap mt-4">
+                    <small class="text-xs">Have something exciting and want us to collaborate ? Lets Discuss</small>
+                    <a href="https://github.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
+                    <a href="https://twitter.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> &nbsp;
+                    <a href="https://linkedin.com/in/spaceofmiah/" class="text-lg hover:text-gray-300"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    &nbsp;
+                    <a type="mail" href="mailto:agbonzeosazuwa@gmail.com" class="text-lg hover:text-gray-300"><i class="fa fa-envelope-square"
+                            aria-hidden="true"></i></a>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-2xl mb-6">Tech Tools</h3>
+
+                <div class="flex flex-row flex-wrap place-items-center gap-3">
+                    <div v-for="item in tech_stack" class="p-1 px-2 bg-slate-300 text-black rounded-xl">
+                        <p class="font-bold text-xs">{{item}}</p>
+                    </div>
+                </div>
             </section>
 
             <section class="md:max-w-[700px] mt-24">
@@ -102,26 +109,12 @@
                         I hope I get opportunity to work again on other future projects.
                     </p>
                 </article>
-                </div>
-
-
-
-
-
+            </section>
         </header>
     </main>
 
-    <footer class="sm:max-w-[calc(100vw-89px)] sm:mx-auto flex flex-row gap-4">
-
-        <p>spaceofmiah &copy; 2023</p>
-
-        <a href="https://github.com/spaceofmiah/"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://twitter.com/spaceofmiah/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://linkedin.com/in/spaceofmiah/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-        &nbsp;
-        <a type="mail" href="mailto:agbonzeosazuwa@gmail.com"><i class="fa fa-envelope-square"
-                aria-hidden="true"></i></a>
-
+    <footer class="sm:max-w-[calc(100vw-89px)] sm:mx-auto mt-8">
+        <small class="text-xs">spaceofmiah &copy; 2023</small>
     </footer>
 </body>
 
