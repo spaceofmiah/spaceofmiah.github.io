@@ -1,98 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spaceofmiah | Agbonze Jeremiah Osazuwa</title>
-    <link rel="stylesheet" href="style.css">
+    <title>spaceofmiah | Agbonze Jeremiah Osazuwa Portfolio</title>
     <script src="https://use.fontawesome.com/75811e7290.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Experienced Python Engineer building software solution and automating tasks to aid productivity">
+    <meta name="keywords" content="experienced python engineer software solutions developer automation django fastapi">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/db2fstxt2/image/upload/v1699795264/portfolio/fav-spaceofmiah.ico"
+        type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
-<body>
-    <nav>
-        <div>
-            <h4>spaceofmiah</h4>
-            <span class="tcn"><i class="fa fa-sun-o" aria-hidden="true" onclick="changeTheme(event)"></i></span> 
-        </div>
-        
 
-        <section>
-            <h3>Fullstack Engineer, Python Expert & Technical Writer</h3>
-            <p>creating functional, scalable and high throughput web application</p>
-        </section>
+<body>
+    <nav class="relative right-10 sm:block sm:right-0">
+        <img class="w-[200px]"
+            src="https://res.cloudinary.com/db2fstxt2/image/upload/c_limit,r_0,w_400/v1699792078/portfolio/nbg-spaceofmiah.png"
+            alt="Spaceofmiah Brand Logo: Osazuwa Jeremiah Agbonze (spaceofmiah) brand image meaning in miah's space everything is his opinion">
     </nav>
 
-    <header>
+    <main class="sm:max-w-[calc(100vw-89px)] sm:mx-auto mt-20" id="app">
+        <header>
+            <section class="md:max-w-[700px] mb-10">
+                <p class="font-light text-xl leading-10">Hello <span>👋🏻</span> I'm Osazuwa Jeremiah Agbonze. I'm an
+                    <span class="font-bold text-gray-500">Experienced Python Enginer</span> & <span
+                        class="font-bold text-gray-500">Founder</span>. I have built software solutions for SMEs,
+                    automated
+                    tasks to aid productivity and deployed production grade systems for <span
+                        class="font-bold text-gray-500">over 6 years</span> now.</p>
+            </section>
 
-        <p style="text-align: center;">Start with some of my works</p>
-        <div id="projects-table">
-            <div class="project">
-               <h5>Tabagoods</h5> 
-               <small>Philadephia's best one stop get all online store for tobacco products <em>(PWA)</em></small> <br>
-               <a href="https://tabagoods.store" target="_blank"><small><b>&lt; visit &gt;</b></small></a>
-            </div>
-            <div class="project">
-                <h5>Jise</h5>
-                <small>Eco-friendly online food ordering & delivery platform saving mother earth one delivery at a time <em>(Mobile)</em></small> <br>
-                <a href="https://jise.ng" target="_blank"><small><b>&lt; visit &gt;</b></small></a>
-            </div>
-            <div class="project">
-                <h5>Efosa</h5>
-                <small>Ontario local business aggregator and indexing platform <em>(Web)</em></small> <br>
-                <a href="https://efosa.ca" target="_blank"><small><b>&lt; visit &gt;</b></small></a>
-            </div>
-        </div>
+            <section class="mb-14">
+                <h3 class="text-2xl mb-6">Tech Tools</h3>
 
-
-        <div id="testimonial">
-            <h5>COLLABORATOR'S SAY ABOUT ME</h5>
-
-            <article>
-                <small>
-                    <b>Marvelous Gbenro</b> <br>
-
-                    He's literally the best builder I know and I've met a fair share of engineers being an engineer myself. 
-                    He goes above and beyond, highly communicative with great leadership abilities. 
-                    He breathes the startup mentality (get much done with so little). An absolute genius! <br>
-
-                    <em>( founder Jise )</em>
-                </small>
-            </article>
+                <div class="flex flex-row flex-wrap place-items-center gap-3">
+                    <div v-for="item in tech_stack" class="p-1 px-2 bg-slate-300 text-black rounded-xl">
+                        <p class="font-bold text-xs">{{item}}</p>
+                    </div>
+                </div>
+            </section>
 
 
-            <article>
-                <small>
-                    <b>Edward Chinedu Chiazor</b><br>
+            <section class="md:max-w-[700px]">
+                <h3 class="text-2xl mb-3">Built & Building</h3>
+                <section class="flex flex-row gap-6 place-items-center">
+                    <a href="https://diarupt.ai" class="font-light text-md hover:text-gray-500">Diarupt</a>
+                    <a href="https://jise.ng" class="font-light text-md hover:text-gray-500">Jise</a>
+                    <a class="font-light text-md">Salo <small class="text-xs text-gray-500">(wip)</small></a>
+                </section>
 
-                    I worked with Osas on a project where he was a back-end developer and designed the architecture for the solution. 
-                    he is very knowledgeable, easy to work with and provided rapid and insightful responses to issues/problems even before they arose 
-                    I hope I get opportunity to work again on other future projects. <br>
-                    <em>( founder Efosa )</em>
-                </small>
-            </article>
-        </div>
+                <small class="text-xs">Have something exciting and want us to collaborate ? Lets Discuss</small>
+            </section>
+
+            <section class="md:max-w-[700px] mt-24">
+                <h3 class="text-2xl mb-3">Feedbacks Gotten</h3>
+
+                <article class="mb-10">
+                    <div class="mb-3">
+                        <h4>Michael Otusanya</h4>
+                        <small>Software Engineer</small>
+                    </div>
+                    <p class="leading-8">
+                        I've had the privilege of working alongside Osazuwa since 2018, and I highly recommend him as a
+                        dedicated and highly skilled developer. He consistently demonstrates deep technical knowledge, a
+                        commitment to excellence, and a knack for simplifying complex problems. Osazuwa is not only a
+                        valuable team member but also a constant source of inspiration. He is a true professional who
+                        consistently delivers high-quality work and meets project deadlines. If you're looking for a
+                        talented developer who can make an immediate impact, Osazuwa is the right choice
+                    </p>
+                </article>
+
+                <article class="mb-10">
+                    <div class="mb-3">
+                        <h4>Marvelous Gbenro</h4>
+                        <small>Founder & CEO Jise</small>
+                    </div>
+                    <p class="leading-8">
+                        He's literally the best builder I know and I've met a fair share of engineers being an engineer
+                        myself. He goes above and beyond, highly communicative with great leadership abilities.
+                        He breathes the startup mentality (get much done with so little). An absolute genius!
+                    </p>
+                </article>
+
+
+                <article class="mb-3">
+                    <div class="mb-3">
+                        <h4>Edward Chinedu Chiazor</h4>
+                        <small>Founder & CEO Efosa</small>
+                    </div>
+                    <p>
+
+                        I worked with Osas on a project where he was a back-end developer and designed the architecture
+                        for the solution.
+                        he is very knowledgeable, easy to work with and provided rapid and insightful responses to
+                        issues/problems even before they arose
+                        I hope I get opportunity to work again on other future projects.
+                    </p>
+                </article>
+                </div>
 
 
 
-        <section id="footer">
-            <figure>
-                <img src="https://avatars1.githubusercontent.com/u/37231237?s=460&u=89f8c288904e3ff6eec939c9fa83fd92884c2657&v=4" alt="My image">
-            </figure>
-            <div id="intro">
-                <h1>I've got more !!!</h1>
-                <p>Agbonze Jeremiah Osazuwa is my name, and i'm open to collab</p>
-                <small>connect and contact</small>
-    
-                <a href="https://github.com/spaceofmiah/"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
-                <a href="https://twitter.com/spaceofmiah/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> &nbsp;
-                <a href="https://linkedin.com/in/spaceofmiah/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> &nbsp;
-                <a type="mail" href="mailto:agbonzeosazuwa@gmail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-            </div>
-        </section>
 
-        
-            
-    </header>
 
-    <script src="./script.js"></script>
+        </header>
+    </main>
+
+    <footer class="sm:max-w-[calc(100vw-89px)] sm:mx-auto flex flex-row gap-4">
+
+        <p>spaceofmiah &copy; 2023</p>
+
+        <a href="https://github.com/spaceofmiah/"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
+        <a href="https://twitter.com/spaceofmiah/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> &nbsp;
+        <a href="https://linkedin.com/in/spaceofmiah/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        &nbsp;
+        <a type="mail" href="mailto:agbonzeosazuwa@gmail.com"><i class="fa fa-envelope-square"
+                aria-hidden="true"></i></a>
+
+    </footer>
 </body>
+
 </html>
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const tech_stack = ref([
+                "Python", "Django", "FastAPI", "Pydantic", "Sqlalchemy", "Docker", "Git", "Pytest", "Scrapy", "Pandas", "Javascript", "React", "Vuejs"
+            ])
+            return {
+                tech_stack
+            }
+        }
+    }).mount('#app')
+</script>
