@@ -47,20 +47,9 @@
                     <a href="https://jise.ng" class="font-light text-md hover:text-gray-500">Jise</a>
                     <a class="font-light text-md">Salo <small class="text-xs text-gray-500">(wip)</small></a>
                     <a class="font-light text-md">Kade <small class="text-xs text-gray-500">(wip)</small></a>
-                    <a class="font-light text-md">Rattr <small class="text-xs text-gray-500">(wip)</small></a>
                 </section>
 
-                <div class="flex flex-row gap-1 gap-x-4 place-items-center flex-wrap mt-4">
-                    <small class="text-sm">Have something exciting & want us to collaborate ? Lets Discuss</small>
-                    <a type="mail" href="mailto:agbonzeosazuwa@gmail.com" class="text-lg hover:text-gray-300"><i
-                            class="fa fa-envelope-square" aria-hidden="true"></i></a> &nbsp;
-                    <a href="https://github.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i
-                            class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
-                    <a href="https://twitter.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i
-                            class="fa fa-twitter-square" aria-hidden="true"></i></a> &nbsp;
-                    <a href="https://linkedin.com/in/spaceofmiah/" class="text-lg hover:text-gray-300"><i
-                            class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                </div>
+                <email-icon cta="Have something exciting & want us to collaborate ? Lets Discuss"></email-icon>
             </section>
 
             <section class="mb-16">
@@ -76,7 +65,6 @@
 
             <section>
                 <h3 class="text-2xl">Technical Articles</h3>
-
 
                 <div class="grid grid-cols-3 gap-4 mt-8">
                     <div>
@@ -122,11 +110,7 @@
                     </div>
                 </div>
 
-                <div class="flex-wrap mt-4">
-                    <i class="fa fa-envelope-square text-xl" aria-hidden="true"></i>
-                    <a type="mail" href="mailto:agbonzeosazuwa@gmail.com" class="font-bold text-lg">&nbsp;Let Me Write
-                        For You</a>
-                </div>
+                <email-icon cta="Let Me Write For You"></email-icon>
             </section>
 
             <section class="mt-14">
@@ -199,34 +183,58 @@
                     <span class="md:mx-4"></span> 
                     C<span class="md:mx-2"></span>O<span class="md:mx-2"></span>L<span class="md:mx-2"></span>L<span class="md:mx-2"></span>A<span class="md:mx-2"></span>B<span class="md:mx-2"></span>O<span class="md:mx-2"></span>R<span class="md:mx-2"></span>A<span class="md:mx-2"></span>T<span class="md:mx-2"></span>E</h3>
 
-                <span>
-                    <i class="fa fa-envelope-square text-xl" aria-hidden="true"></i>
-                    <a type="mail" href="mailto:agbonzeosazuwa@gmail.com" class="font-bold text-xl">
-                        &nbsp;Contact Me
-                    </a>
-                </span>
+                    <email-icon cta="Contact Me"></email-icon>
             </article>
         </header>
     </main>
 
-    <footer class="sm:max-w-[calc(100vw-89px)] sm:mx-auto mt-8">
-        <small class="text-md text-gray-400">Spaceofmiah &copy; 2024 - Rendered by Vue - Powered by Github Pages</small>
+    <footer class="sm:max-w-[calc(100vw-89px)] sm:mx-auto mt-8  flex flex-wrap-reverse justify-between place-items-center">
+        <small class="text-md text-gray-400">Spaceofmiah &copy; 2024 - Rendered by Vue - Powered by Github Pages - Styled by TailwindCSS</small>
+        
+        <span class="flex place-items-center align-items-center gap-x-8">
+            <a href="https://github.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i
+                class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/spaceofmiah/" class="text-lg hover:text-gray-300"><i
+                    class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com/in/spaceofmiah/" class="text-lg hover:text-gray-300"><i
+                    class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </span>
     </footer>
-</body>
 
-</html>
 
-<script>
-    const { createApp, ref } = Vue
+    <script>
+        const { createApp, defineComponent, ref } = Vue;
 
-    createApp({
-        setup() {
-            const tech_stack = ref([
-                "Python", "Django", "Node", "Typescript", "FastAPI", "NestJS", "Pydantic", "Sqlalchemy", "Docker", "Git", "Pytest", "Scrapy", "Pandas", "Javascript", "React", "Vuejs"
-            ])
-            return {
-                tech_stack
+        const EmailIcon = defineComponent({
+            template: `
+                <div class="mt-4 relative">
+                    <small class="text-lg font-extrabold">{{cta}}</small>&nbsp;
+                    <span class="absolute animate-ping -top-0 ml-4 h-2 w-2 bg-sky-400 shadow-sm rounded-full"></span>
+                    <a type="mail" href="mailto:agbonzeosazuwa@gmail.com" class="text-xl hover:text-gray-300">
+                        <i class="fa fa-envelope text-lg" aria-hidden="true"></i>
+                    </a>
+                </div>
+            `,
+            props: {
+                cta: {
+                    type: String,
+                    required: true
+                }
             }
-        }
-    }).mount('#app')
-</script>
+        });
+
+        createApp({
+            setup() {
+                const tech_stack = ref([
+                    "Python", "Typescript", "FastAPI", "Postgres", "Django", "Node", "Vuejs", "React", "NestJS", "Docker",
+                    "Git"
+                ])
+
+                return {
+                    tech_stack
+                }
+            }
+        }).component('email-icon', EmailIcon).mount('#app');
+    </script>
+</body>
+</html>
